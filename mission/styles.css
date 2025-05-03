@@ -12,7 +12,17 @@ body{
     border: 1px solid #ccc;
    
 }
-  
+.dark-theme {
+  background-color: #121212;
+  color: #ffffff;
+}
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme p,
+.dark-theme li {
+  color: #ffffff;
+}
+
   
   h1 {
     color: #333; 
