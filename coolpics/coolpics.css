@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  margin: 0;
+  background-color: #fff;
+}
+
+a:link,
+a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+#menu {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.5rem 0;
+}
+
+.hide {
+  display: none;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  max-width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.viewer img {
+  max-height: 90%;
+  border: 4px solid white;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  nav li {
+    margin: 0; /* removes stacked spacing */
+  }
+
+  #menu {
+    display: none;
+  }
+}
