@@ -10,6 +10,45 @@
   --secondary-font: 'Mooli', sans-serif;
 }
 
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+dialog .viewer {
+  position: relative;
+  text-align: center;
+}
+
+dialog img {
+  width: 90%;
+  max-height: 100%;
+  margin: 20vh auto;
+  display: block;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;

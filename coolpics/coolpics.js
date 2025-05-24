@@ -14,42 +14,42 @@ window.addEventListener("load", () => {
     }
   }
 
-  function viewerTemplate(pic, alt) {
-    return `
+  window.addEventListener("resize", handleResize);
+  handleResize();
+
+  const gallery = document.querySelector(".gallery");
+
+  gallery.addEventListener("click", (event) => {
+    const clickedImage = event.target.closest("img");
+    if (!clickedImage) return;
+
+    const src = clickedImage.getAttribute("src");
+    const alt = clickedImage.getAttribute("alt");
+    const baseName = src.split("-")[0];
+    const fullSrc = baseName + "-full.jpeg";
+    console.log("Full image path:", fullSrc); // for debugging
+
+    const modal = document.createElement("dialog");
+    modal.innerHTML = `
       <div class="viewer">
         <button class="close-viewer">X</button>
-        <img src="${pic}" alt="${alt}">
-      </div>`;
-  }
+        <img src="${fullSrc}" alt="${alt}">
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.showModal();
 
-  function viewHandler(event) {
-    const clicked = event.target;
-    if (clicked.tagName === "IMG") {
-      const src = clicked.getAttribute("src");
-      const base = src.split("-")[0];
-      const fullPath = base + "-full.jpeg";
-      const alt = clicked.alt;
+    const closeBtn = modal.querySelector(".close-viewer");
+    closeBtn.addEventListener("click", () => {
+      modal.close();
+      modal.remove();
+    });
 
-      const html = viewerTemplate(fullPath, alt);
-      document.body.insertAdjacentHTML("afterbegin", html);
-
-      document.querySelector(".close-viewer").addEventListener("click", closeViewer);
-    }
-  }
-
-  function closeViewer() {
-    const viewer = document.querySelector(".viewer");
-    if (viewer) viewer.remove();
-  }
-
-  document.querySelector(".gallery").addEventListener("click", viewHandler);
-
-  handleResize();
-  window.addEventListener("resize", handleResize);
-
-  // Manual attach close button for static modal test
-  const closeBtn = document.querySelector(".close-viewer");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeViewer);
-  }
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.close();
+        modal.remove();
+      }
+    });
+  });
 });
