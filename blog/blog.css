@@ -1,0 +1,144 @@
+/* General Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #473144;
+  background-color: #fff;
+  line-height: 1.6;
+  padding: 1rem;
+}
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Lora', Impact, serif;
+  color: #AF1B3F;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #AF1B3F;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  justify-content: end;
+  justify-items: end;
+  gap: 1rem;
+  list-style: none;
+  margin: 0 auto;
+  padding: 1rem 0;
+  max-width: 900px; /* Prevent full edge stretch */
+  border-top: 1px solid #EFC69B;
+  border-bottom: 1px solid #EFC69B;
+}
+
+nav a {
+  font-size: 1.125rem; /* Bigger than default */
+  color: #AF1B3F;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+nav {
+  border-top: 1px solid #EFC69B;
+  border-bottom: 1px solid #EFC69B;
+  padding: 1rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+header {
+  border-bottom: 2px solid #EFC69B;
+  padding-bottom: 1rem;
+   margin-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.book-entry {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+
+.book-entry aside {
+  text-align: right;
+  min-width: 150px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.book-entry article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.book-entry article img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+
+.filters {
+  flex: 1;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: 1px solid #EFC69B;
+  background-color: #fdf8f4;
+}
+
+
+nav ul {
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  justify-content: end;
+  justify-items: end;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #AF1B3F;
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: top 0.3s;
+}
+
+.skiptocontent a:focus {
+  top: 0;
+}
