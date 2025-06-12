@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.credit-card-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-container {
+    position: relative;
+    width: 400px;
+    height: 250px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem 1rem;
+}
+
+.card-front {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+     
+}
+
+.card-front img.card-image {
+    grid-column: 1 / span 2;  /* spans across both columns */
+    justify-self: end;        /* right-align the image */
+    height: 55px;
+}
+
+
+.card-back {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+    background-color: #cccccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 400px;
+    height: 250px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 20px;
+    left: 80px;
+    z-index: 1;
+}
+
+.magnetic-stripe {
+    grid-column: 1 / span 2;
+    height: 40px;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+/* CVV Label - bottom right */
+.card-back label[for="cvv"] {
+    grid-column: 2;
+    grid-row: 3;
+    justify-self: end;
+    align-self: end;
+}
+
+/* CVV Input - bottom right */
+.card-back input#cvv {
+    grid-column: 2;
+    grid-row: 4;
+    justify-self: end;
+    align-self: end;
+    width: 60px;
+}
+
+
+#card-number {
+    grid-column: 1 / span 2;
+}
+
+
+
+
+
+
+
