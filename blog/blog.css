@@ -75,6 +75,8 @@ main {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 2rem;
+  max-width: 1200px;
+    margin: 0 auto;
 }
 
 .book-entry {
@@ -106,12 +108,13 @@ main {
 
 
 .filters {
-  flex: 1;
+  flex: 0 0 25%; /* Take 25% of the main area */
   margin-left: 2rem;
   padding: 1rem;
   border: 1px solid #EFC69B;
   background-color: #fdf8f4;
 }
+
 
 
 nav ul {
@@ -141,4 +144,86 @@ nav ul {
 
 .skiptocontent a:focus {
   top: 0;
+}
+
+article {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 70%;
+}
+
+article img {
+  max-width: 150px;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  line-height: 1.6;
+}
+
+.blog-article .meta {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #555;
+  border-right: 1px solid #ccc; /* This is the key! */
+  padding-right: 1rem;          /* Adds some space between line and content */
+}
+
+.blog-article {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.blog-article .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-article .content img {
+  max-width: 200px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.blog-article .content h2 {
+  color: #80002a;
+  margin-top: 0;
+}
+
+.blog-article .content p {
+  line-height: 1.6;
+}
+
+
+@media (max-width: 600px) {
+  article img {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
 }
