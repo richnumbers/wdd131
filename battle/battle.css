@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Lato&display=swap");
+
+:root {
+  --primary-color: #1B1F3B;
+  --secondary-color: #C7C9D3;
+  --accent1-color: #F5D67C;
+  --accent2-color: white;
+
+  --heading-font: "Uncial Antiqua", cursive;
+  --paragraph-font: "Lato", sans-serif;
+}
 .character-options {
   display: flex;
   justify-content: center;
@@ -164,3 +175,50 @@ body {
   background-color: #f44336; /* red */
   transition: width 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+  .character-options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .character-card {
+    flex: 1 1 40%;
+    max-width: 45%;
+  }
+
+  .battle-screen {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card img,
+  .character-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .action-button,
+  .shop-item button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .battle-panel {
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 1em;
+  }
+
+  h1, h2 {
+    font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+}
+
