@@ -178,29 +178,27 @@ body {
 
 @media screen and (max-width: 768px) {
   .character-options {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
   }
 
   .character-card {
-    flex: 1 1 40%;
-    max-width: 45%;
+    flex: 1 1 140px;
+    max-width: 150px;
   }
 
   .battle-screen {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .shop-grid {
-    grid-template-columns: 1fr;
+  .battle-panel {
+    flex: 1 1 240px;
+    max-width: 300px;
   }
 
-  .character-card img,
-  .character-img {
+  .character-img,
+  .character-card img {
     width: 100%;
     max-width: 100%;
   }
@@ -208,17 +206,36 @@ body {
   .action-button,
   .shop-item button {
     width: 100%;
-    max-width: 100%;
-  }
-
-  .battle-panel {
-    width: 100%;
-    max-width: 420px;
-    margin-bottom: 1em;
+    max-width: 300px;
   }
 
   h1, h2 {
     font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+}
+@media screen and (max-width: 450px) {
+  .character-options,
+  .battle-screen {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .character-card,
+  .battle-panel {
+    flex: 1 1 45%;
+    max-width: 45%;
+    margin-bottom: 1em;
+  }
+
+  .action-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .action-button {
+    width: 90%;
   }
 }
 

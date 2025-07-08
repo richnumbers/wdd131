@@ -59,6 +59,65 @@
     "defense": 6,
     "sprite": "Monsters/Orc-Cammander.png",
     "description": "Leads with brute force and battle fury."
+  },
+
+  {
+    "id" : "Lizard",
+    "name" : "Lizard",
+    "hp" : 100,
+    "attack" : 20,
+    "defense" : 10,
+    "sprite" : "Monsters/Lizerman.png",
+    "description" : "A large, scaly beast. Tough and dangerous."
+
+  },
+    {
+    "id" : "Lizard-Bow",
+    "name" : "Lizard Bow",
+    "hp" : 100 ,
+    "attack" : 12,
+    "defense" : 8,
+    "sprite" : "Monsters/Lizerman-Bow.png",
+    "description" : "A lizardman archer, quick and deadly from a distance."
+  },
+  {
+    "id": "Lizard-Leader",
+    "name": "Lizard Leader",  
+    "hp": 120,
+    "attack": 18,
+    "defense": 12,
+    "sprite": "Monsters/Lizerman-leader.png",
+    "description": "The leader of the lizardmen, commanding and fierce."
+
+  },
+  {
+    "id": "Skeleton",
+    "name": "Skeleton",
+    "hp": 80,
+    "attack": 15,
+    "defense": 7,
+    "sprite": "Monsters/Skeleton.png",
+    "description": "An animated skeleton, relentless and unyielding."
+
+  },
+  {
+    "id" : "Skeleton-ranger",
+    "name" : "Skeleton Ranger",
+    "hp" : 90,
+    "attack" : 18,
+    "defense" : 9,
+    "sprite" : "Monsters/Skeleton-Ranger.png",
+    "description" : "A skeleton archer, deadly from afar with its bow."
+  },
+  {
+    "id": "Reaper",
+    "name": "Reaper",
+    "hp": 150,
+    "attack": 25,
+    "defense": 15,
+    "sprite": "Monsters/Reaper.png",
+    "description": "A terrifying specter, wielding a scythe and draining life from its foes."
   }
+
  
 ]
