@@ -1,0 +1,12 @@
+{
+  "id": "player1",
+  "name": "Warrior",
+  "level": 1,
+  "maxHp": 100,
+  "currentHp": 100,
+"maxAttack": 12,
+"minAttack": 8,
+  "defense": 3,
+  "inventory": [],
+  "gold": 20
+}

@@ -1,0 +1,58 @@
+[
+
+     {
+    "id": "slime",
+    "name": "Slime",
+    "hp": 35,
+    "attack": 4,
+    "defense": 3,
+    "sprite": "Monsters/Slime.png",
+    "description": "Jelly-like enemy. Takes hits well, but not dangerous alone."
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "hp": 30,
+    "attack": 6,
+    "defense": 2,
+    "sprite": "Monsters/Goblin.png",
+    "description": "A quick little nuisance with a nasty grin."
+  },
+  {
+    "id": "goblin-shaman",
+    "name": "Goblin Shaman",
+    "hp": 25,
+    "attack": 5,
+    "defense": 1,
+    "sprite": "Monsters/Goblin-Shama.png",
+    "description": "Casts weak spells, but can surprise the unprepared."
+  },
+  {
+    "id": "orc",
+    "name": "Orc Grunt",
+    "hp": 50,
+    "attack": 10,
+    "defense": 4,
+    "sprite": "Monsters/Orc.png",
+    "description": "Strong and simple. Swings hard, thinks slow."
+  },
+  {
+    "id": "orc-warrior",
+    "name": "Orc Warrior",
+    "hp": 60,
+    "attack": 12,
+    "defense": 5,
+    "sprite": "Monsters/Orc-War.png",
+    "description": "A brutal orc fighter, stronger than the average brute."
+  },
+  {
+    "id": "orc-commander",
+    "name": "Orc Commander",
+    "hp": 75,
+    "attack": 14,
+    "defense": 6,
+    "sprite": "Monsters/Orc-Cammander.png",
+    "description": "Leads with brute force and battle fury."
+  }
+ 
+]

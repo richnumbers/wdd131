@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dungeon Clash - Choose Character</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="battle.css">
+</head>
+<body>
+
+  <!-- Character Selection -->
+  <section id="character-select">
+    <h1>Choose Your Character</h1>
+    <div class="character-options">
+      <div class="character-card" onclick="selectCharacter('female')">
+        <img src="Players/Female-player.png" alt="Female Warrior">
+        <p>Female Warrior</p>
+      </div>
+      <div class="character-card" onclick="selectCharacter('male')">
+        <img src="Players/Male-player.png" alt="Male Warrior">
+        <p>Male Warrior</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" style="display: none;">
+  <h2>Shop</h2>
+  <p id="gold-display">Gold: 100</p>
+  <div id="shop-items" class="shop-grid">
+    <!-- Shop items will be injected here by JS -->
+  </div>
+</section>
+
+
+  <main id="battle-screen" class="battle-screen" style="display: none;">
+
+  <section class="battle-panel player-panel">
+  <div class="hud-bar">
+    <label>HP:</label>
+    <div class="health-bar">
+      <div id="player-health" class="health-fill"></div>
+    </div>
+  </div>
+
+  <img id="player-image" src="" alt="Player" class="character-img" />
+
+  
+  <div class="action-panel">
+    <button class="action-button">Attack</button>
+    <button class="action-button">Defend</button>
+    <button class="action-button">Item</button>
+  </div>
+</section>
+
+     
+</div>
+   <section class="battle-panel enemy-panel">
+  <div class="hud-bar">
+    <label>HP:</label>
+
+<div class="health-bar">
+  <div id="enemy-health" class="health-fill"></div> <!-- ✅ THIS ID -->
+</div>
+  <img id="enemy-image" alt="Enemy" class="character-img" />
+  <p id="enemy-name">Slime</p>
+</section>
+
+
+
+    </section>
+  </main>
+
+
+ <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Lato&display=swap");
+
+:root {
+  --primary-color: #1B1F3B;
+  --secondary-color: #C7C9D3;
+  --accent1-color: #F5D67C;
+  --accent2-color: white;
+
+  --heading-font: "Uncial Antiqua", cursive;
+  --paragraph-font: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--paragraph-font);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1em;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1em;
+  color: var(--accent1-color);
+  font-family: var(--heading-font);
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+}
+
+.cover-art, .player-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1em 0;
+}
+
+.instructions, .character-preview {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1em auto;
+  max-width: 800px;
+}
+
+.start-button {
+  background-color: var(--accent1-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.75em 2em;
+  margin-top: 1em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-family: var(--heading-font);
+}
+
+.start-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+#search-form {
+  margin-top: 2em;
+}
+
+#search-input {
+  padding: 0.5em;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 6px;
+  border: 1px solid #888;
+}
+
+#search-form button {
+  padding: 0.5em 1em;
+  background-color: var(--accent1-color);
+  border: none;
+  border-radius: 6px;
+  color: var(--primary-color);
+  margin-left: 0.5em;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.logo {
+  width: 100px;
+  margin-top: 1em;
+}
+
+.social a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}

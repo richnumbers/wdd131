@@ -1,0 +1,63 @@
+[
+  {
+    "id": "potion-small",
+    "name": "Small Health Potion",
+    "description": "Restores 20 HP.",
+    "type": "item",
+    "effect": {
+      "hpRestore": 20
+    },
+    "cost": 10
+  },
+  {
+    "id": "potion-large",
+    "name": "Large Health Potion",
+    "description": "Restores 50 HP.",
+    "type": "item",
+    "effect": {
+      "hpRestore": 50
+    },
+    "cost": 25
+  },
+  {
+    "id": "level-up-attack",
+    "name": "Train Attack",
+    "description": "Permanently increases Attack by 1.",
+    "type": "upgrade",
+    "effect": {
+      "attackBoost": 1
+    },
+    "cost": 30
+  },
+  {
+    "id": "level-up-hp",
+    "name": "Train Vitality",
+    "description": "Permanently increases HP by 10.",
+    "type": "upgrade",
+    "effect": {
+      "hpBoost": 10
+    },
+    "cost": 30
+  },
+  {
+    "id": "level-up-defense",
+    "name": "Train Defense",
+    "description": "Permanently increases Defense by 1.",
+    "type": "upgrade",
+    "effect": {
+      "defenseBoost": 1
+    },
+    "cost": 30
+  },
+  {
+    "id": "rest",
+    "name": "Rest",
+    "description": "Restores all HP and removes all status effects.",
+    "type": "action",
+    "effect": {
+      "hpRestore": 100,
+      "statusEffects": "remove"
+    },
+    "cost": 10
+  }
+]
