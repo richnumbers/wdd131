@@ -1,4 +1,5 @@
 let monster = null;
+let count = 0;
 
 
 function selectCharacter(choice) {
@@ -127,10 +128,25 @@ function playerAttack() {
   console.log(`You hit ${monster.name} for ${damage} damage!`);
 
   if (monster.hp <= 0) {
-    console.log(`${monster.name} defeated!`);
-    endBattle(); // ✅ Load next monster
-    return;
+  console.log(`${monster.name} defeated!`);
+  const roll = getRandomDamage(monster.mingold, monster.maxgold);
+  player.gold += roll; // ✅ Add gold to player
+
+  count++;
+ 
+
+  if (count >= 3) {
+  
+
+    count = 0;
+    loadShop();  // ✅ Shop appears after 3 fights
+  } else {
+    endBattle(); // ✅ Otherwise load next monster
   }
+
+  return;
+}
+
 
   // ✅ Now the monster attacks back
   monsterAttack();
@@ -157,6 +173,90 @@ function monsterAttack() {
     // TODO: trigger game over or restart
   }
 }
+
+
+async function loadShop() {
+
+
+  try {
+    const res = await fetch("shop.json");
+    const items = await res.json();
+
+    
+
+    const shopContainer = document.getElementById("shop-items");
+    shopContainer.innerHTML = "";
+
+    items.forEach(item => {
+    
+
+      const div = document.createElement("div");
+      div.classList.add("shop-item");
+
+      div.innerHTML = `
+        <h3>${item.name}</h3>
+        <p>${item.description}</p>
+        <p>Cost: ${item.cost}g</p>
+        <button onclick='buyItem(${item.cost}, ${JSON.stringify(item.effect).replace(/"/g, "&quot;")})'>Buy</button>
+      `;
+
+      shopContainer.appendChild(div);
+    });
+
+    document.getElementById("player-gold").textContent = player.gold;
+    document.getElementById("battle-screen").style.display = "none";
+    document.getElementById("shop").style.display = "block";
+  } catch (err) {
+    alert("❌ ERROR: " + err.message);
+    console.error(err);
+  }
+}
+
+function buyItem(cost, effect) {
+  if (player.gold < cost) {
+    alert("Not enough gold!");
+    return;
+  }
+
+  player.gold -= cost;
+
+  if (effect.hpRestore) {
+    player.currentHp += effect.hpRestore;
+    if (player.currentHp > player.maxHp) player.currentHp = player.maxHp;
+  }
+
+  if (effect.attackBoost) {
+    player.maxAttack += effect.attackBoost;
+  }
+
+  if (effect.hpBoost) {
+    player.maxHp += effect.hpBoost;
+    player.currentHp += effect.hpBoost;
+  }
+
+  if (effect.defenseBoost) {
+    player.defense += effect.defenseBoost;
+  }
+
+  // ✅ Update gold display
+ const span = document.getElementById("player-gold");
+const full = document.getElementById("gold-display");
+
+if (span) span.textContent = player.gold;
+if (full) full.textContent = `Gold: ${player.gold}`;
+
+
+  // ✅ (optional) Update player health bar
+  updatePlayerHealth(player.currentHp, player.maxHp);
+}
+
+function exitShop() {
+  document.getElementById("shop").style.display = "none";
+  document.getElementById("battle-screen").style.display = "flex";
+  endBattle(); // Or loadNextMonster() if that's what you're using
+}
+
+
 
 
 

@@ -7,7 +7,9 @@
     "attack": 4,
     "defense": 3,
     "sprite": "Monsters/Slime.png",
-    "description": "Jelly-like enemy. Takes hits well, but not dangerous alone."
+    "description": "Jelly-like enemy. Takes hits well, but not dangerous alone.",
+    "mingold": 20,
+    "maxgold": 30
   },
   {
     "id": "goblin",
@@ -16,16 +18,20 @@
     "attack": 6,
     "defense": 2,
     "sprite": "Monsters/Goblin.png",
-    "description": "A quick little nuisance with a nasty grin."
+    "description": "A quick little nuisance with a nasty grin.",
+    "mingold" : 25,
+    "maxgold" : 35
   },
   {
     "id": "goblin-shaman",
     "name": "Goblin Shaman",
-    "hp": 25,
-    "attack": 5,
-    "defense": 1,
+    "hp": 40,
+    "attack": 8,
+    "defense": 6,
     "sprite": "Monsters/Goblin-Shama.png",
-    "description": "Casts weak spells, but can surprise the unprepared."
+    "description": "Casts weak spells, but can surprise the unprepared.",
+    "mingold": 40,
+    "maxgold": 50
   },
   {
     "id": "orc",

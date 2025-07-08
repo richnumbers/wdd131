@@ -26,10 +26,13 @@
 
   <section id="shop" style="display: none;">
   <h2>Shop</h2>
-  <p id="gold-display">Gold: 100</p>
+  <p>Gold: <span id="player-gold">0</span></p>
+
   <div id="shop-items" class="shop-grid">
-    <!-- Shop items will be injected here by JS -->
+  
+
   </div>
+  <button onclick="exitShop()">Next Fight</button>
 </section>
 
 
@@ -60,7 +63,7 @@
     <label>HP:</label>
 
 <div class="health-bar">
-  <div id="enemy-health" class="health-fill"></div> <!-- ✅ THIS ID -->
+  <div id="enemy-health" class="health-fill"></div> 
 </div>
   <img id="enemy-image" alt="Enemy" class="character-img" />
   <p id="enemy-name">Slime</p>
